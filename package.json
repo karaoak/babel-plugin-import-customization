@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run build && jest",
     "test:watch": "jest --watchAll",
-    "build": "babel tests/code --out-dir tests/lib --copy-files",
+    "build": "npx babel tests/code --out-dir tests/lib --copy-files",
     "build:watch": "build -- --watch"
   },
   "repository": {
@@ -29,8 +29,12 @@
   },
   "homepage": "https://github.com/uribro/babel-plugin-import-customization/#readme",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "jest": "^22.4.2"
+  },
+  "jest": {
+    "testURL": "http://localhost/"
   }
 }
